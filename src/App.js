@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { Fruits } from "./components/Fruits";
 
 function App() {
   const [fruits, setFruit] = useState([
@@ -18,11 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Total price : {totalPrice}$</p>
-        <ul>
-          {fruits.map((item) => (
-            <li>{item.name}</li>
-          ))}
-        </ul>
+        <Fruits fruits={fruits} />
         <button onClick={filterRedFruits}>filter red fruits</button>
       </header>
     </div>
